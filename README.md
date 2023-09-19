@@ -46,3 +46,5 @@ Once running we should be able to Mint tickets, respond to changes from the wall
 	npm run dev:testnet
 
 9. Test application functionality on MetaMask Browser Extension and Mobile
+
+Note this is a replica of https://github.com/MetaMask/react-sdk-linea-workshop with condensed instructions
