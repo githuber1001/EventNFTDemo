@@ -6,8 +6,8 @@ Once running we should be able to Mint tickets, respond to changes from the wall
 
 1. Clone the project and switch to the proper branch:
 
-	git clone https://github.com/MetaMask/react-sdk-linea-workshop && \ 
-	cd react-sdk-linea-workshop
+	git clone https://github.com/MetaMask/EventNFTDemo && \ 
+	cd EventNFTDemo
 
 2. Open in your Editor of choice and install dependencies from root of project:
 
