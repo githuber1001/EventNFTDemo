@@ -6,47 +6,43 @@ Once running we should be able to Mint tickets, respond to changes from the wall
 
 1. Clone the project and switch to the proper branch:
 
-git clone https://github.com/MetaMask/react-sdk-linea-workshop && \ 
-cd react-sdk-linea-workshop
+	git clone https://github.com/MetaMask/react-sdk-linea-workshop && \ 
+	cd react-sdk-linea-workshop
 
 2. Open in your Editor of choice and install dependencies from root of project:
 
-npm install
+	npm install
 
 3. Create an Infura account and setup an Infura account and create an API Key
 
-Network: "Web3 API"
-Name: Choose any name you like
-Once the account is created you will want to copy the API key by browsing to the Infura dashboard, selecting the project and clicking on the copy icon to the right of your API Key.
+	Create Environment Variable file inside the apps/web root:
+	Copy the file at apps/web/.env.example to .env
 
-Create Environment Variable file inside the apps/web root:
-Copy the file at apps/web/.env.example to .env
+	Use hexadecimal network id 
+	Linea: '0xe704'
 
-# Use hexadecimal network id 
-#   Linea: '0xe704'
-#   Mumbai: '0x13881'
-VITE_PUBLIC_NETWORK_ID=[LINEA-HEX-CHAIN-ID-GOES-HERE]
-VITE_PUBLIC_INFURA_PROJECT_ID=[INFURA-API-KEY-GOES-HERE]
+	VITE_PUBLIC_NETWORK_ID=[LINEA-HEX-CHAIN-ID-GOES-HERE]
+	VITE_PUBLIC_INFURA_PROJECT_ID=[INFURA-API-KEY-GOES-HERE]
 
-Create Environment Variable file inside the apps/blockchain root:
-Copy the file at apps/blockchain/.env.example to .env
+	Create Environment Variable file inside the apps/blockchain root:
+	Copy the file at apps/blockchain/.env.example to .env
 
-# grab from your dashboard, also known as API key
-INFURA_PROJECT_ID=[INFURA-API-KEY-GOES-HERE]
-PRIVATE_KEY=[MM-PRIVATE-KEY-GOES]
+	Obtain from your dashboard, also known as API key
+	INFURA_PROJECT_ID=[INFURA-API-KEY-GOES-HERE]
+	PRIVATE_KEY=[MM-PRIVATE-KEY-GOES]
 
 4. Get Linea at: infura.io/faucet/linea
 
 5. Build project and compile contracts to generate apps/web/contract-abis:
-npm run build
+	npm run build
 
 6. Deploy contract on Linea testnet
-npm run deploy:linea --workspace blockchain
+	npm run deploy:linea --workspace blockchain
 
 7. Copy the contract address to the apps/web/lib/config.ts:
-contractAddress: '[CONTRACT-ADDRESS]'
+	contractAddress: '[CONTRACT-ADDRESS]'
 
 8. Run frontend against deployed contract:
-npm run dev:testnet
+	npm run dev:testnet
 
 9. Test application functionality on MetaMask Browser Extension and Mobile
